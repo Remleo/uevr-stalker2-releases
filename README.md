@@ -9,14 +9,6 @@ plus a profile made for this game. Everything you need is in one archive.
 **It's an alpha.** Very playable, but expect rough edges. If something breaks, see [Troubleshooting](#troubleshooting)
 and tell us about it.
 
-## What you need
-
-- **STALKER 2: Heart of Chornobyl, Update 2** (the Unreal Engine 5.5 one). Tested on the Steam version. The Game Pass
-  version should pick up the same profile, but nobody's tried it yet.
-- **A PC VR headset with OpenXR.** Tested on Meta Quest with **Virtual Desktop**, using its own OpenXR runtime
-  (**VDXR**). That's what we recommend: the same game through SteamVR runs noticeably slower.
-- **Touch-style controllers** (grip, trigger, two sticks).
-
 ## Getting started
 
 1. **Unzip the archive** anywhere you like, e.g. `D:\Stalker2VR`. Keep the folder structure as it is.
@@ -24,12 +16,8 @@ and tell us about it.
    PC, go to **Options** and set **OpenXR Runtime** to **VDXR**. Then connect from the headset as usual. Anything else
    that provides OpenXR should work too (Quest Link, SteamVR), but SteamVR in particular costs you frames.
 3. **Run `UEVRInjector.exe`** from that folder and leave it open.
-4. **Start the game.** The injector spots it and hooks in by itself a few seconds later. If it doesn't, pick
-   `Stalker2-Win64-Shipping` in the injector's list and hit **Inject**.
-5. **Put the headset on.** The main menu should float in front of you. Load a save and have fun.
-
-That's it. You don't need to copy anything into AppData: the profile lives right next to UEVR in
-`UnrealVRMod\Stalker2`, and that copy is the one that gets used.
+4. **Start the game.** A few seconds later VR switches on by itself.
+5. **Put the headset on.** The main menu floats in front of you. Load a save and have fun.
 
 ## Gestures
 
@@ -84,6 +72,10 @@ Windows Defender sometimes deletes it right after unzipping. Injectors look scar
 to Defender's exclusions (Windows Security → Virus & threat protection → Manage settings → Exclusions) and unzip
 again.
 
+### VR didn't switch on
+
+Make sure `UEVRInjector.exe` is still open. In its window, pick the game in the list and click **Inject**.
+
 ### The hands go weird
 
 Sometimes after a load or a crazy moment the hands or the weapon can get stuck, float off or vanish. Easy fix, no
@@ -117,6 +109,10 @@ Changes apply right away and are saved for next time.
 This isn't stock UEVR. It's [our fork](https://github.com/remleo/UEVR) with a bunch of fixes, most of them made for
 STALKER 2 on UE 5.5.
 
+**First and most important: it actually runs.** Stock UEVR doesn't cope with STALKER 2 Update 2: the game's move to
+Unreal Engine 5.5 left it without a UI, with broken console settings, and crashing on save loads. This build starts,
+plays and loads saves without crashing.
+
 ### Things you'll see
 
 - **Both eyes see the same lighting.** Stock UEVR gives each eye its own copy of the game's far lighting, and one
@@ -148,6 +144,14 @@ STALKER 2 on UE 5.5.
 - **One profile for every store.** Steam (`-Win64-`) and Game Pass (`-WinGDK-`) builds use the same folder, and a
   profile next to UEVR wins over the one in AppData, so a release is just a folder you unzip.
 - **The injector defaults to OpenXR** and keeps its auto-inject settings in the profile.
+
+## How it was tested
+
+- **Game:** STALKER 2: Heart of Chornobyl, **Update 2** (Unreal Engine 5.5), **Steam** version.
+- **Headset:** Meta Quest with Touch controllers, over **Virtual Desktop** with its **VDXR** OpenXR runtime.
+- **SteamVR** works too, but runs noticeably slower than VDXR.
+- **Not tested yet:** the Game Pass version (it should pick up the same profile), Quest Link, other headsets and
+  controllers. If you try one, let us know how it went.
 
 ## Something broke?
 
