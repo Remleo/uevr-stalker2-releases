@@ -11,13 +11,15 @@ and tell us about it.
 
 ## Getting started
 
-1. **Unzip the archive** anywhere you like, e.g. `D:\Stalker2VR`. Keep the folder structure as it is.
-2. **Start your VR runtime.** Best is **Virtual Desktop with VDXR**: in the **Virtual Desktop Streamer** app on your
+1. **Download the latest release** from the [Releases page](https://github.com/remleo/uevr-stalker2-releases/releases):
+   the `Stalker2VR-....zip` file at the top.
+2. **Unzip it** anywhere you like, e.g. `D:\Stalker2VR`. Keep the folder structure as it is.
+3. **Start your VR runtime.** Best is **Virtual Desktop with VDXR**: in the **Virtual Desktop Streamer** app on your
    PC, go to **Options** and set **OpenXR Runtime** to **VDXR**. Then connect from the headset as usual. Anything else
    that provides OpenXR should work too (Quest Link, SteamVR), but SteamVR in particular costs you frames.
-3. **Run `UEVRInjector.exe`** from that folder and leave it open.
-4. **Start the game.** A few seconds later VR switches on by itself.
-5. **Put the headset on.** The main menu floats in front of you. Load a save and have fun.
+4. **Run `UEVRInjector.exe`** from that folder and leave it open.
+5. **Start the game.** A few seconds later VR switches on by itself.
+6. **Put the headset on.** The main menu floats in front of you. Load a save and have fun.
 
 ## Gestures
 
