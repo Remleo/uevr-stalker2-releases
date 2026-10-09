@@ -70,9 +70,9 @@ as long as you hold the grip. Let go and it's put away. There's no separate "hol
 
 ### `UEVRInjector.exe` disappeared
 
-Windows Defender sometimes deletes it right after unzipping. Injectors look scary to antivirus software. Add the folder
-to Defender's exclusions (Windows Security → Virus & threat protection → Manage settings → Exclusions) and unzip
-again.
+Your antivirus probably removed it. Injectors look scary to antivirus software, so it's a common false alarm. Add the
+folder to your antivirus's exclusions (on Windows Defender: Windows Security → Virus & threat protection → Manage
+settings → Exclusions), then unzip the archive again.
 
 ### VR didn't switch on
 
@@ -93,6 +93,12 @@ Everything gets rebuilt in a second. Close the menu the same way you opened it.
 
 That's on purpose. In VR the profile switches the game to windowed mode so the HUD fits the headset, and the game
 remembers that when you quit. For flat play, just switch it back to fullscreen in the game's display settings.
+
+### Something else broke?
+
+Check the [known issues](https://github.com/remleo/uevr-stalker2-releases/issues) first: someone may have hit it
+already. If not, open a new one, attach `UnrealVRMod\Stalker2\log.txt` from the archive folder, and tell us what you
+were doing when it happened.
 
 ## Settings
 
@@ -154,11 +160,6 @@ plays and loads saves without crashing.
 - **SteamVR** works too, but runs noticeably slower than VDXR.
 - **Not tested yet:** the Game Pass version (it should pick up the same profile), Quest Link, other headsets and
   controllers. If you try one, let us know how it went.
-
-## Something broke?
-
-Open an issue and attach `UnrealVRMod\Stalker2\log.txt` from the archive folder. Tell us what you were doing when it
-happened.
 
 ## License
 
