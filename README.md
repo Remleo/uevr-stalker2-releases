@@ -161,6 +161,11 @@ plays and loads saves without crashing.
 - **Not tested yet:** the Game Pass version (it should pick up the same profile), Quest Link, other headsets and
   controllers. If you try one, let us know how it went.
 
+## Support my work
+
+Enjoying it? You can buy me a coffee on [Patreon](https://www.patreon.com/remleo). It helps me keep polishing this and
+bring full VR to more games, and supporters get new alpha builds early.
+
 ## License
 
 The STALKER 2 profile is © remleo, licensed under
