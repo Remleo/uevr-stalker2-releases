@@ -1,10 +1,12 @@
-# S.T.A.L.K.E.R. 2 in full VR
+# S.T.A.L.K.E.R. 2 Update 2.0 (UE 5.5) — native-like VR
 
 Play STALKER 2 in VR with your own hands. Pull guns from over your shoulder, raise them to your eye to aim,
 check your wrist for the bolt, put the scanner up with your left hand. No buttons for any of it, just gestures.
 
-It's built on a fork of [praydog's UEVR](https://github.com/praydog/UEVR) with fixes for STALKER 2 on Unreal Engine 5.5,
-plus a profile made for this game. Everything you need is in one archive.
+> [!WARNING]
+> **The [original UEVR](https://github.com/praydog/UEVR) crashes on S.T.A.L.K.E.R. 2 since Update 2.0**, when the game
+> moved to Unreal Engine 5.5. This build comes with [a fixed fork of UEVR](https://github.com/remleo/UEVR) that runs it,
+> **no crashes**, plus a full VR profile made for this game. Everything you need is in one archive.
 
 **It's an alpha.** Very playable, but expect rough edges. If something breaks, see [Troubleshooting](#troubleshooting)
 and tell us about it.
@@ -117,7 +119,7 @@ Changes apply right away and are saved for next time.
 This isn't stock UEVR. It's [our fork](https://github.com/remleo/UEVR) with a bunch of fixes, most of them made for
 STALKER 2 on UE 5.5.
 
-**First and most important: it actually runs.** Stock UEVR doesn't cope with STALKER 2 Update 2: the game's move to
+**First and most important: it actually runs.** The original UEVR doesn't cope with STALKER 2 Update 2.0: the game's move to
 Unreal Engine 5.5 left it without a UI, with broken console settings, and crashing on save loads. This build starts,
 plays and loads saves without crashing.
 
@@ -155,7 +157,7 @@ plays and loads saves without crashing.
 
 ## How it was tested
 
-- **Game:** STALKER 2: Heart of Chornobyl, **Update 2** (Unreal Engine 5.5), **Steam** version.
+- **Game:** STALKER 2: Heart of Chornobyl, **Update 2.0** (Unreal Engine 5.5), **Steam** version.
 - **Headset:** Meta Quest with Touch controllers, over **Virtual Desktop** with its **VDXR** OpenXR runtime.
 - **SteamVR** works too, but runs noticeably slower than VDXR.
 - **Not tested yet:** the Game Pass version (it should pick up the same profile), Quest Link, other headsets and
