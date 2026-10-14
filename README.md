@@ -3,6 +3,9 @@
 Play STALKER 2 in VR with your own hands. Pull guns from over your shoulder, raise them to your eye to aim,
 check your wrist for the bolt, put the scanner up with your left hand. No buttons for any of it, just gestures.
 
+Rather play with a mouse and keyboard, and don't get motion sick easily? Jump straight to
+[Playing with mouse and keyboard](#playing-with-mouse-and-keyboard).
+
 > [!WARNING]
 > **The [original UEVR](https://github.com/praydog/UEVR) crashes on S.T.A.L.K.E.R. 2 since Update 2.0**, when the game
 > moved to Unreal Engine 5.5. This build comes with [a fixed fork of UEVR](https://github.com/remleo/UEVR) that runs it,
@@ -22,6 +25,10 @@ and tell us about it.
 4. **Run `UEVRInjector.exe`** from that folder and leave it open.
 5. **Start the game.** A few seconds later VR switches on by itself.
 6. **Put the headset on.** The main menu floats in front of you. Load a save and have fun.
+
+**Updating from an earlier version?** Unzip the new archive into a **new folder** rather than over the old one. Your
+old settings stay behind in the old folder, and the new version starts with its own defaults (this time a bigger HUD,
+sitting a bit lower).
 
 ## Gestures
 
@@ -43,6 +50,11 @@ as long as you hold the grip. Let go and it's put away. There's no separate "hol
 | **Aim down the sights** | raise the gun to your eye and look along it, like a real one. Lower it to stop. Scopes zoom in. |
 | **Throw a grenade** | right hand at your chest, squeeze and **keep holding the grip** (that's the draw), then pull the trigger to wind up and let go of the trigger to throw |
 | **Ammo type, fire mode, attachments** | turn the gun **side-on to your eyes**, like you're checking it out. The game's weapon menu opens and shows them; use the buttons it shows. Look away to close it. |
+
+**Rather have your gun stay in your hand?** Open the UEVR menu (**click both sticks at the same time**, L3 + R3, or
+press **Insert**), go to **LuaLoader** → **Stalker2** and tick **Keep guns in hand** at the top. Your pistol or rifle
+then stays after you let go of the grip, and goes back when you bring your right hand behind your right shoulder, no
+button needed. A knife, a grenade or the bolt still go away with the grip.
 
 ### Left hand: gear
 
@@ -67,6 +79,23 @@ as long as you hold the grip. Let go and it's put away. There's no separate "hol
   short press and a long press different jobs).
 - **Things you can interact with** get their marker floating right on them in the world.
 - **Menus** stay put where they open, so you can look around them.
+
+## Playing with mouse and keyboard
+
+Rather sit back with a mouse and keyboard? Switch the mode on:
+
+1. Open the UEVR menu: **click both sticks at the same time** (L3 + R3), or press **Insert** on the keyboard.
+2. Go to **LuaLoader** → **Stalker2**.
+3. Tick **Play with mouse and keyboard** at the top.
+4. Close the menu the same way you opened it.
+
+The scripts restart in a second, and the game plays like the flat version, only in your headset:
+
+- The mouse turns you and aims. Your head looks around freely on top of that.
+- The HUD stays in front of your eyes, and the crosshair stays where the mouse points.
+- **Aim down the sights** with the right mouse button: the view settles onto the sights, and scopes zoom in.
+
+To go back to full VR with your hands, untick it the same way.
 
 ## Troubleshooting
 
@@ -106,10 +135,11 @@ were doing when it happened.
 
 The profile has a few settings of its own, in the same UEVR menu under **LuaLoader** → **Stalker2**:
 
+- **Keep guns in hand** and **Play with mouse and keyboard**: the two checkboxes at the top, described above.
 - **Interface**: how far away and how big the HUD is, and how high it sits; the same three for menus. Plus a
   slider that moves just the HUD down inside its frame.
-- **Aiming**: how far the view shifts to your right eye when you look through a scope. Tweak it if the scope doesn't
-  line up with your eye.
+- **Aiming**: how far the view shifts to your right eye when you look through a scope (with mouse and keyboard,
+  through any sights). Tweak it if the sights don't line up with your eye.
 - **Debug**: **Write the log**, for when you're sending us a bug report.
 
 Changes apply right away and are saved for next time.
@@ -150,6 +180,7 @@ plays and loads saves without crashing.
 - **Shared lighting between the eyes** and the **canted projection** (above), with zoom that stays centred on your eye.
 - **A second UI layer**, so the crosshair can live in the world while the HUD stays on your head.
 - **Menus that stay where they open**, and a camera freeze for cutscenes.
+- **Smooth aiming down the sights**: no jump as the view moves onto the sights or onto a scope.
 - **More for scripts**: where the controller really points, where the UI is drawn, reloading scripts on a key.
 - **One profile for every store.** Steam (`-Win64-`) and Game Pass (`-WinGDK-`) builds use the same folder, and a
   profile next to UEVR wins over the one in AppData, so a release is just a folder you unzip.
