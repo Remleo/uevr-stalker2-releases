@@ -27,8 +27,7 @@ and tell us about it.
 6. **Put the headset on.** The main menu floats in front of you. Load a save and have fun.
 
 **Updating from an earlier version?** Unzip the new archive into a **new folder** rather than over the old one. Your
-old settings stay behind in the old folder, and the new version starts with its own defaults (this time a bigger HUD,
-sitting a bit lower).
+old settings stay behind in the old folder, and the new version starts with its own defaults.
 
 ## Gestures
 
@@ -47,7 +46,8 @@ as long as you hold the grip. Let go and it's put away. There's no separate "hol
 | **Grenade** | right hand at the **middle of your chest**, squeeze the grip |
 | **Keep it** | keep holding the grip. **Let go and the weapon goes away.** |
 | **Shoot** | right trigger |
-| **Aim down the sights** | raise the gun to your eye and look along it, like a real one. Lower it to stop. Scopes zoom in. |
+| **Aim down the sights** | raise the gun to your eye and look along it, like a real one. Lower it to stop. Scopes zoom in, and you stay in the scope until you lower the gun. |
+| **Hold a rifle with both hands** | put your **left hand on the front of the rifle**, where you'd hold a real one, and squeeze the left grip. Keep holding it: the rifle turns with both hands, and so do your shots. Let go with your left hand and you stop aiming down the sights. Pistols stay one-handed. |
 | **Throw a grenade** | right hand at your chest, squeeze and **keep holding the grip** (that's the draw), then pull the trigger to wind up and let go of the trigger to throw |
 | **Ammo type, fire mode, attachments** | turn the gun **side-on to your eyes**, like you're checking it out. The game's weapon menu opens and shows them; use the buttons it shows. Look away to close it. |
 
@@ -151,7 +151,8 @@ STALKER 2 on UE 5.5.
 
 **First and most important: it actually runs.** The original UEVR doesn't cope with STALKER 2 Update 2.0: the game's move to
 Unreal Engine 5.5 left it without a UI, with broken console settings, and crashing on save loads. This build starts,
-plays and loads saves without crashing.
+plays and loads saves without crashing. v1.2 fixes two crashes that slipped through: one while loading a save on some
+PCs, and one when you used a scope after a load.
 
 ### Things you'll see
 
@@ -166,6 +167,10 @@ plays and loads saves without crashing.
   but flattens it in VR. That's off, so a rifle looks like a rifle.
 - **Real scopes.** You look through the actual scope, the hole lines up with your eye, and your shots land where the
   sights say.
+- **Rifles in both hands.** Your left hand stays on the front of the rifle and turns it with you, and the shots go where
+  the barrel points.
+- **Steady scopes.** Turning your head while you look through a scope doesn't shake the picture, and your own head lamp
+  doesn't throw shadows across it.
 - **No fake weapon sway.** Your hands are the sway now.
 - **HUD locked to your head, crosshair out in the world** where your gun is actually pointing.
 - **Cutscenes and dialogues don't yank your view around**, and you won't walk through the scene by leaning.
@@ -174,8 +179,10 @@ plays and loads saves without crashing.
 
 - **Unreal Engine 5.5 support.** The UI shows up again, and console variables are read and set correctly on UE 5.4+
   (they came back as garbage before, and reading one could reset it).
-- **No crashes on save loads.** UEVR now learns when objects are destroyed from the engine itself, and stops calling
-  into ones that are gone.
+- **No crashes on save loads.** UEVR now learns when objects are destroyed from the engine itself, and nothing is
+  called on a gone one or handed to the game anymore.
+- **No crash when the game resizes its window.** On PCs where DLSS Frame Generation isn't available, the game resizes
+  its window another way. The original UEVR misses that, and the game crashed a few seconds into loading a save.
 - **Games whose frame counter freezes or restarts** don't break head tracking anymore.
 - **Shared lighting between the eyes** and the **canted projection** (above), with zoom that stays centred on your eye.
 - **A second UI layer**, so the crosshair can live in the world while the HUD stays on your head.
