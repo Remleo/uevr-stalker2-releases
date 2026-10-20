@@ -46,7 +46,7 @@ as long as you hold the grip. Let go and it's put away. There's no separate "hol
 | **Grenade** | right hand at the **middle of your chest**, squeeze the grip |
 | **Keep it** | keep holding the grip. **Let go and the weapon goes away.** |
 | **Shoot** | right trigger |
-| **Aim down the sights** | raise the gun to your eye and look along it, like a real one. Lower it to stop. Scopes zoom in, and you stay in the scope until you lower the gun. |
+| **Aim down the sights** | raise the gun to your eye and look along it, like a real one. Lower it to stop. Scopes zoom in, and you stay in the scope until you take the gun down from your eye. |
 | **Hold a rifle with both hands** | put your **left hand on the front of the rifle**, where you'd hold a real one, and squeeze the left grip. Keep holding it: the rifle turns with both hands, and so do your shots. Let go with your left hand and you stop aiming down the sights. Pistols stay one-handed. |
 | **Throw a grenade** | right hand at your chest, squeeze and **keep holding the grip** (that's the draw), then pull the trigger to wind up and let go of the trigger to throw |
 | **Ammo type, fire mode, attachments** | turn the gun **side-on to your eyes**, like you're checking it out. The game's weapon menu opens and shows them; use the buttons it shows. Look away to close it. |
@@ -54,7 +54,8 @@ as long as you hold the grip. Let go and it's put away. There's no separate "hol
 **Rather have your gun stay in your hand?** Open the UEVR menu (**click both sticks at the same time**, L3 + R3, or
 press **Insert**), go to **LuaLoader** → **Stalker2** and tick **Keep guns in hand** at the top. Your pistol or rifle
 then stays after you let go of the grip, and goes back when you bring your right hand behind your right shoulder, no
-button needed. A knife, a grenade or the bolt still go away with the grip.
+button needed. A knife, a grenade or the bolt still go away with the grip. To switch guns, or to take a grenade, just
+reach for it with the first one still in hand.
 
 ### Left hand: gear
 
@@ -94,6 +95,9 @@ The scripts restart in a second, and the game plays like the flat version, only 
 - The mouse turns you and aims. Your head looks around freely on top of that.
 - The HUD stays in front of your eyes, and the crosshair stays where the mouse points.
 - **Aim down the sights** with the right mouse button: the view settles onto the sights, and scopes zoom in.
+- **A cursor in the menus.** Wherever the interface stands still in front of you (the main menu, the backpack, the PDA,
+  dialogues, a body you search) a cursor shows up, and it reaches the whole interface even though the game's window is
+  wider than your monitor.
 
 To go back to full VR with your hands, untick it the same way.
 
@@ -166,17 +170,25 @@ PCs, and one when you used a scope after a load.
 - **Guns and hands at their real size.** The game draws first-person stuff with a trick that looks fine on a monitor
   but flattens it in VR. That's off, so a rifle looks like a rifle.
 - **Real scopes.** You look through the actual scope, the hole lines up with your eye, and your shots land where the
-  sights say.
+  sights say. No stray piece of the scope's inside over your view, and collimators and holographic sights are told apart
+  right, also after you swap a sight in the game.
 - **Rifles in both hands.** Your left hand stays on the front of the rifle and turns it with you, and the shots go where
   the barrel points.
 - **Steady scopes.** Turning your head while you look through a scope doesn't shake the picture, and your own head lamp
   doesn't throw shadows across it.
+- **Landings no longer throw your gun at your face.**
+- **Scopes stay up while you shoot.**
+- **Hands stay on the controllers** after crouching or a knife strike.
+- **Mouse and keyboard: arms and guns at their real size.**
 - **No fake weapon sway.** Your hands are the sway now.
 - **HUD locked to your head, crosshair out in the world** where your gun is actually pointing.
 - **Cutscenes and dialogues don't yank your view around**, and you won't walk through the scene by leaning.
 
 ### Fixes in UEVR itself
 
+- **SteamVR problems fixed.** No more stutter.
+- **The mouse cursor shows in the headset** and reaches the whole interface, also when the game's window is wider than
+  your monitor.
 - **Unreal Engine 5.5 support.** The UI shows up again, and console variables are read and set correctly on UE 5.4+
   (they came back as garbage before, and reading one could reset it).
 - **No crashes on save loads.** UEVR now learns when objects are destroyed from the engine itself, and nothing is
@@ -197,7 +209,7 @@ PCs, and one when you used a scope after a load.
 
 - **Game:** STALKER 2: Heart of Chornobyl, **Update 2.0** (Unreal Engine 5.5), **Steam** version.
 - **Headset:** Meta Quest with Touch controllers, over **Virtual Desktop** with its **VDXR** OpenXR runtime.
-- **SteamVR** works too, but runs noticeably slower than VDXR.
+- **SteamVR** works too and no longer stutters, but runs a little slower than VDXR.
 - **Not tested yet:** the Game Pass version (it should pick up the same profile), Quest Link, other headsets and
   controllers. If you try one, let us know how it went.
 
