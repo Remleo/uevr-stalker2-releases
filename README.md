@@ -70,6 +70,7 @@ reach for it with the first one still in hand.
 - **Walk** with the left stick, in the direction you're looking. **Turn** with the right stick. You can also just
   walk around your room.
 - **Jump, crouch, reload, use, inventory** and the rest are the game's normal gamepad buttons, on your controllers.
+- **Y doesn't switch guns** in VR: you draw them by hand, so the game's own switch button is turned off.
 - **Buttons match their labels.** On Quest controllers this profile puts the Xbox buttons where the letters say:
   **A and B on the right controller, X and Y on the left**. Stock UEVR swaps two of them (Xbox B ends up on the left X
   and Xbox X on the right B), so if you've played other UEVR games, that's why it feels different here. Prefer the
