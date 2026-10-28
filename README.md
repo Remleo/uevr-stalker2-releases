@@ -125,6 +125,11 @@ restart needed:
 
 Everything gets rebuilt in a second. Close the menu the same way you opened it.
 
+### The mouse cursor is gone in a menu
+
+Another window has come in front of the game: your headset's own menu, a notification, or an Alt+Tab. The cursor only
+shows while the game is in front. **Alt+Tab back to the game** and it's there again.
+
 ### The game is in a window when I play without VR
 
 That's on purpose. In VR the profile switches the game to windowed mode so the HUD fits the headset, and the game
@@ -183,6 +188,8 @@ PCs, and one when you used a scope after a load.
 - **Mouse and keyboard: arms and guns at their real size.**
 - **No fake weapon sway.** Your hands are the sway now.
 - **HUD locked to your head, crosshair out in the world** where your gun is actually pointing.
+- **The crosshair shows up on headsets where it went missing.** On some headsets (a Pimax Crystal Light, for one) it never
+  appeared when VR switched on while you were already in the game.
 - **Cutscenes and dialogues don't yank your view around**, and you won't walk through the scene by leaning.
 
 ### Fixes in UEVR itself
@@ -198,7 +205,8 @@ PCs, and one when you used a scope after a load.
   its window another way. The original UEVR misses that, and the game crashed a few seconds into loading a save.
 - **Games whose frame counter freezes or restarts** don't break head tracking anymore.
 - **Shared lighting between the eyes** and the **canted projection** (above), with zoom that stays centred on your eye.
-- **A second UI layer**, so the crosshair can live in the world while the HUD stays on your head.
+- **A UI layer of the crosshair's own**, so the crosshair can live in the world while the HUD stays on your head. It
+  shows up whatever its size, on any headset.
 - **Menus that stay where they open**, and a camera freeze for cutscenes.
 - **Smooth aiming down the sights**: no jump as the view moves onto the sights or onto a scope.
 - **More for scripts**: where the controller really points, where the UI is drawn, reloading scripts on a key.
