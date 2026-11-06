@@ -6,6 +6,8 @@ check your wrist for the bolt, put the scanner up with your left hand. No button
 Rather play with a mouse and keyboard, and don't get motion sick easily? Jump straight to
 [Playing with mouse and keyboard](#playing-with-mouse-and-keyboard).
 
+Want more frames? See [More frames: frame generation](#more-frames-frame-generation).
+
 > [!WARNING]
 > **The [original UEVR](https://github.com/praydog/UEVR) crashes on S.T.A.L.K.E.R. 2 since Update 2.0**, when the game
 > moved to Unreal Engine 5.5. This build comes with [a fixed fork of UEVR](https://github.com/remleo/UEVR) that runs it,
@@ -64,6 +66,7 @@ reach for it with the first one still in hand.
 | **Bolt and knife** | look at the **back of your left wrist**, like checking a watch. The bolt and the knife show up there. Grab one with your right hand (squeeze the grip near it). |
 | **Anomaly scanner** | reach over your **left shoulder** with your left hand, squeeze the grip. Hold it up to read it; let go to put it away. |
 | **Head lamp** | left hand to your **left temple**, pull the left trigger. The light follows your head. |
+| **Night vision** | left hand to the **middle of your forehead**, pull the left trigger. Pull again to switch it off. You need night vision goggles equipped. |
 
 ### Everything else
 
@@ -102,6 +105,29 @@ The scripts restart in a second, and the game plays like the flat version, only 
 
 To go back to full VR with your hands, untick it the same way.
 
+## More frames: frame generation
+
+Optional, but worth a try if you want smoother motion. **OFXR Bridge** adds frame generation to OpenXR games: it fills
+in frames between the ones the game renders, so the headset gets two or three times as many. There are a few versions of
+it around, and I recommend elliotttate's: it takes its motion data straight from the game's DLSS, so the extra frames
+come out clean and cost the GPU little. I've put up a build of it with fixes for UEVR games, until they're merged into
+the original:
+
+**[OFXR Bridge with UEVR fixes, latest release](https://github.com/remleo/OFXR-Bridge/releases)**
+
+What my build fixes under UEVR:
+
+- **The fastest mode works in VR now (NVIDIA RTX cards).** In the bridge's tray menu, under *How OFXR makes frames*,
+  that's **Interpolate, from the game's DLSS vectors where it has them (cheapest)**: it builds the extra frames from the
+  game's own DLSS motion data, so it costs the least. Under UEVR the two eyes could get each other's motion data, and
+  the picture ghosted. Now each eye gets its own, also after you load a save.
+- **The HUD and the crosshair move as smoothly as the world,** instead of in steps.
+- **It works with a DLSS model picked in the NVIDIA app.** Without the fix the bridge got no motion data from DLSS then.
+
+To use it: download the ZIP of the newest release on that page, unzip it anywhere, and run `OFXRBridgeTray.exe`, which
+switches it on. Then start the game as usual. Turn DLSS on in the game's settings: the bridge takes its motion data from
+DLSS. It's elliotttate's tool; my build only adds the fixes.
+
 ## Troubleshooting
 
 ### `UEVRInjector.exe` disappeared
@@ -125,6 +151,17 @@ restart needed:
 
 Everything gets rebuilt in a second. Close the menu the same way you opened it.
 
+### The game is turned to one side
+
+You look straight ahead and see the game off to the side, so you're always looking over your shoulder. Tell the game
+where "ahead" is:
+
+1. Open the UEVR menu: **click both sticks at the same time** (L3 + R3), or press **Insert** on the keyboard.
+2. Go to **VR** → **Keybinds** and set a key for **Recenter View Key**.
+3. Close the menu, **look straight ahead**, and press that key.
+
+It stays that way, also after loading a save.
+
 ### The mouse cursor is gone in a menu
 
 Another window has come in front of the game: your headset's own menu, a notification, or an Alt+Tab. The cursor only
@@ -134,6 +171,12 @@ shows while the game is in front. **Alt+Tab back to the game** and it's there ag
 
 That's on purpose. In VR the profile switches the game to windowed mode so the HUD fits the headset, and the game
 remembers that when you quit. For flat play, just switch it back to fullscreen in the game's display settings.
+
+### The game won't stop aiming
+
+You lower the weapon, but the game stays in aim mode: the aiming circle stays on screen. In the game's settings, under
+**Controls**, **Hold to aim** is set to **Toggle**. Set it to **Hold**. Raising the weapon to your eye presses the game's
+aim button for you and lowering it lets go, and with **Toggle** the game ignores the letting go.
 
 ### Something else broke?
 
@@ -186,6 +229,8 @@ PCs, and one when you used a scope after a load.
 - **Scopes stay up while you shoot.**
 - **Hands stay on the controllers** after crouching or a knife strike.
 - **Mouse and keyboard: arms and guns at their real size.**
+- **Mouse and keyboard: the game stays in front of you.** A loading screen or the main menu could leave the whole game
+  turned to one side, so you were always looking over your shoulder.
 - **No fake weapon sway.** Your hands are the sway now.
 - **HUD locked to your head, crosshair out in the world** where your gun is actually pointing.
 - **The crosshair shows up on headsets where it went missing.** On some headsets (a Pimax Crystal Light, for one) it never
